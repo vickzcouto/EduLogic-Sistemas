@@ -2,23 +2,7 @@
 
 ## Fluxograma
 
-```mermaid
-flowchart TD
-    A([Início]) --> B[Ler N1, N2 e Frequência]
-    B --> C[Calcular Média\nM = &lpar;N1 + N2&rpar; / 2]
-
-    C --> D{M ≥ 7,0\nE Frequência ≥ 75%?}
-    D -- Sim --> E([Situação: APROVADO])
-    D -- Não --> F{5,0 ≤ M < 7,0\nE Frequência ≥ 75%?}
-
-    F -- Sim --> G([Situação: RECUPERAÇÃO])
-    F -- Não --> H([Situação: REPROVADO\nM < 5,0 OU Frequência < 75%])
-
-    E --> I([Exibir resultado])
-    G --> I
-    H --> I
-    I --> J([Fim])
-```
+![Fluxograma — Assistente de Aprovação](diagrama.png)
 
 ---
 
