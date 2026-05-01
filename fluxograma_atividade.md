@@ -4,21 +4,20 @@
 
 ```mermaid
 flowchart TD
-    A([Início]) --> B[Ler N1 e N2]
-    B --> C[Ler Frequência]
-    C --> D[Calcular Média\nM = N1 + N2 / 2]
+    A([Início]) --> B[Ler N1, N2 e Frequência]
+    B --> C[Calcular Média\nM = &lpar;N1 + N2&rpar; / 2]
 
-    D --> E{M ≥ 7,0\nE Frequência ≥ 75%?}
-    E -- Sim --> F([Situação: APROVADO])
-    E -- Não --> G{5,0 ≤ M < 7,0\nE Frequência ≥ 75%?}
+    C --> D{M ≥ 7,0\nE Frequência ≥ 75%?}
+    D -- Sim --> E([Situação: APROVADO])
+    D -- Não --> F{5,0 ≤ M < 7,0\nE Frequência ≥ 75%?}
 
-    G -- Sim --> H([Situação: RECUPERAÇÃO])
-    G -- Não --> I([Situação: REPROVADO\nM < 5,0 OU Frequência < 75%])
+    F -- Sim --> G([Situação: RECUPERAÇÃO])
+    F -- Não --> H([Situação: REPROVADO\nM < 5,0 OU Frequência < 75%])
 
-    F --> J([Exibir resultado])
-    H --> J
-    I --> J
-    J --> K([Fim])
+    E --> I([Exibir resultado])
+    G --> I
+    H --> I
+    I --> J([Fim])
 ```
 
 ---
